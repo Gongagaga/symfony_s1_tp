@@ -53,7 +53,10 @@ class PasswordChangeType extends AbstractType
             ]
         ])
         ->add('submit', SubmitType::class, [
-            'label' => 'Changer mot de passe'
+            'label' => 'Changer mot de passe',
+            'attr' => [
+                'class' => 'btn btn-dark'
+            ]
         ])
         ;
     }

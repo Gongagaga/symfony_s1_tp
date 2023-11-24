@@ -4,8 +4,8 @@
 
 {% block body %}
 
-    <div>
-        <h4>Évènements !</h4>
+    <div class="mt-4 mr-4 mb-4">
+        <h1>Évènements !</h1>
     </div>
 
     <nav>
@@ -14,7 +14,7 @@
 
     <div class="d-flex flex-wrap">
         {% for event in events %}
-            <div class="card m-3" style="width: 30rem;">
+            <div class="card m-3" style="width: 27rem;">
                 <div class="card-body">
                     <h5 class="card-title">
                         <a href="{{ path('app_event_details', {'id': event.id}) }}">{{ event.title }}</a>

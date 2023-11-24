@@ -4,24 +4,28 @@
 
 {% block body %}
 
-    <article class="py-4">
-        <header>
-            <h2>{{ eventDetail.title }}</h2>
-            <p>Créé le {{ eventDetail.createdAt|date('d/m/Y H:i') }}</p>
-            <p>Catégorie : {{ eventDetail.category.name }}</p>
-            <p class="mb-1">Par : {{ eventDetail.user.name }}</p>
-        </header>
-        <p class="mb-1">Le {{ eventDetail.startAt|date('d/m/Y H:i') }} à {{ eventDetail.address }}, {{ eventDetail.city }} {{ eventDetail.postalCode }}</p>
-        {{ eventDetail.description }}
-    </article>
+    <div class="card m-3" style="width: 50rem;">
+        <div class="card-body">
+            <h3 class="card-title">
+                <a href="{{ path('app_event_details', {'id': eventDetail.id}) }}">{{ eventDetail.title }}</a>
+            </h3>
+            <h6 class="card-subtitle mb-2 text-muted">
+                <p class="mb-1">Créé le {{ eventDetail.createdAt|date('d/m/Y H:i') }}</p>
+                <p class="mb-1">Par : {{ eventDetail.user.name }}</p>
+                <p class="mb-1">Catégorie : {{ eventDetail.category.name }}</p>
+                <p class="mb-1">Le {{ eventDetail.startAt|date('d/m/Y H:i') }} à {{ eventDetail.address }}, {{ eventDetail.city }} {{ eventDetail.postalCode }}</p>
+            </h6>
+            <p class="card-text h5">{{ eventDetail.description }}</p>      
+        </div>
+    </div>
 
     {% if app.user.name == eventDetail.user.name %}
         <nav>
-            <a href="{{ path('app_event_update', {'id': eventDetail.id}) }}" class="btn btn-primary">Modifier l'évènement</a>
+            <a href="{{ path('app_event_update', {'id': eventDetail.id}) }}" class="btn btn-dark">Modifier l'évènement</a>
         </nav>
     {% endif %}
 
-<h2>Espace commentaire</h2>
+<h2 class="mt-4 mr-4 mb-4">Espace commentaire</h2>
 
 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
     {{ form(form) }}

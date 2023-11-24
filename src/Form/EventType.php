@@ -67,7 +67,10 @@ class EventType extends AbstractType
                 'choice_label' => 'name'
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Publier'
+                'label' => 'Publier',
+                'attr' => [
+                    'class' => 'btn btn-dark'
+                ]
             ]);
     }
 

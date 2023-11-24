@@ -3,7 +3,7 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div>
+    <div class="mt-4 mr-4 mb-4">
         <h1>SymfoEvent - Accueil</h1>
     </div>
 
@@ -15,7 +15,7 @@
 
     <div class="d-flex flex-wrap">
         {% for event in events %}
-            <div class="card m-3" style="width: 25rem;">
+            <div class="card m-3" style="width: 27rem;">
                 <div class="card-body">
                     <h5 class="card-title">
                         <a href="{{ path('app_event_details', {'id': event.id}) }}">{{ event.title }}</a>
