@@ -14,6 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class EventController extends AbstractController
 {
@@ -109,10 +110,14 @@ class EventController extends AbstractController
     #[Route('/event/{id}/update', name: 'app_event_update')]
     public function update(EntityManagerInterface $entityManager, EventRepository $eventRepository, string $id): Response
     {
-        // Composant Request de Symfony
-        $request = Request::createFromGlobals();
 
         $eventUpdate = $eventRepository->find($id);
+        if ($eventUpdate->getId() !== null && $eventUpdate->getUser() !== $this->getUser()) {
+            throw new AccessDeniedException("Cet article n'est pas le vôtre");
+        }
+
+        // Composant Request de Symfony
+        $request = Request::createFromGlobals();
 
         $form = $this->createForm(EventUpdateType::class, $eventUpdate);
         $form->handleRequest($request);
