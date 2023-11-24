@@ -10,16 +10,16 @@ Le projet à faire pour cette semaine sera un site de gestion d'événements, cr
 
 ### Fonctionalités
 
-<!-- * Inscription -->
-<!-- * Connexion/Déconnexion -->
-<!-- * Créer un événement -->
-<!-- * Liste des événements -->
-<!-- * Modifier un événement (si on en est l'auteur) -->
-* Supprimer un événement (si on en est l'auteur)
-<!-- * Créer un commentaire sur la page de l'événement -->
-<!-- * Voir les informations de son compte (à part le mot de passe) -->
-<!-- * Modifier le mot de passe -->
-* S'inscrire/se désinscrire à un événement
+<!-- * Inscription --> ✅
+<!-- * Connexion/Déconnexion --> ✅
+<!-- * Créer un événement --> ✅
+<!-- * Liste des événements --> ✅
+<!-- * Modifier un événement (si on en est l'auteur) --> ✅
+* Supprimer un événement (si on en est l'auteur) ❌
+<!-- * Créer un commentaire sur la page de l'événement --> ✅
+<!-- * Voir les informations de son compte (à part le mot de passe) --> ✅
+<!-- * Modifier le mot de passe --> ✅
+* S'inscrire/se désinscrire à un événement ❌
 
 ### Données
 
@@ -31,49 +31,51 @@ Le projet à faire pour cette semaine sera un site de gestion d'événements, cr
 
 #### Accueil
 
-<!-- Afficher les 5 derniers événements créés. -->
+<!-- Afficher les 5 derniers événements créés. --> ✅
 
 #### Inscription
 
-<!-- Afficher un formulaire d'inscription avec l'email qui servira d'identifiant et un pseudo. -->
+<!-- Afficher un formulaire d'inscription avec l'email qui servira d'identifiant et un pseudo. --> ✅
 
 #### Connexion
 
-<!-- Afficher un formulaire de connexion qui permet à l'utilisateur de se connecter avec son email. -->
+<!-- Afficher un formulaire de connexion qui permet à l'utilisateur de se connecter avec son email. --> ✅
 
 #### Liste des événements
 
-<!-- Afficher la liste de tous les événements avec un système de pagination. Chaque événement propose un lien qui envoie vers le détail de l'événement. -->
+<!-- Afficher la liste de tous les événements avec un système de pagination. Chaque événement propose un lien qui envoie vers le détail de l'événement. --> ✅
 
 #### Détail de l'événement
 
-<!-- Lorsque l'on va sur cette page, on veut afficher toutes les informations de l'événement, un lien pour s'inscrire à l'événement, les commentaires. -->
+<!-- Lorsque l'on va sur cette page, on veut afficher toutes les informations de l'événement, un lien pour s'inscrire à l'événement, les commentaires. --> ✅
 
-La liste des utilisateurs inscrits à l'événement est affichée.
+La liste des utilisateurs inscrits à l'événement est affichée. ❌
 
-<!-- Afficher le formulaire de création d'un commentaire. -->
+<!-- Afficher le formulaire de création d'un commentaire. --> ✅
 
 #### Profil de l'utilisateur
 
-Permet de voir quelles sont les informations de l'utilisateur (email, pseudo) et la liste des événements créés par l'utilisateur.
+Permet de voir quelles sont les informations de l'utilisateur (email, pseudo) ✅
 
-Sur le profil l'utilisateur a possibilité de modifier son mot de passe.
+et la liste des événements créés par l'utilisateur. ❌
 
-<!-- <!-- #### Créer un événement -->
+<!-- Sur le profil l'utilisateur a possibilité de modifier son mot de passe. --> ✅
 
-<!-- Afficher un formulaire de création d'événement et gérer la soumission. Lorsque l'événement a été créé on est redirigé vers la page "Liste des événements".  -->
+#### Créer un événement
+
+<!-- Afficher un formulaire de création d'événement et gérer la soumission. Lorsque l'événement a été créé on est redirigé vers la page "Liste des événements".  --> ✅
 
 #### Modifier un événement
 
-<!-- Permet de modifier un événement créé par l'utilisateur (sinon renvoyer erreur 403). -->
+<!-- Permet de modifier un événement créé par l'utilisateur (sinon renvoyer erreur 403). --> ✅
 
 #### Supprimer un événement
 
-Permet de supprimer un événement créé par l'utilisateur (sinon renvoyer erreur 403).
+Permet de supprimer un événement créé par l'utilisateur (sinon renvoyer erreur 403). ❌
 
 #### Inscription à un événement
 
-L'utilisateur peut s'inscrire à un événement en cliquant sur le lien "S'inscrire à un événement" présent sur la page d'un événement.
+L'utilisateur peut s'inscrire à un événement en cliquant sur le lien "S'inscrire à un événement" présent sur la page d'un événement. ❌
 
 [BONUS] Gérer différents cas : si l'utilisateur est inscrit à un événement au même moment, il ne peut pas s'inscrire à l'événement.
 
