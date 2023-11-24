@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+
+    <div>
+        <h1>SymfoEvent - Mon profil</h1>
+    </div>
+
+    <div>
+        <h5>Mon nom d'utilisateur : 
+            <p>{{ app.user.name }}</p>
+        </h5>
+    </div>
+       
+    <div>
+        <h5>Mon email : 
+            <p>{{ app.user.email }}</p>
+        </h5>
+    </div>
+
+    <div>
+        <h5>Compte créé le :
+            <p>{{ app.user.createdAt|date('d/m/Y H:i') }}</p>
+        </h5>
+    </div>
+
+    <div>
+        {{ form(form) }}
+    </div>
+    
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>SymfoEvent - Accueil</h1>
+    </div>
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <div>
+        <h4>Bienvenue {{ app.user.name }} !</h4>
+    </div>
+{% endif %}
+
+    <ul class="list-unstyled">
+        {% for event in events %}
+            <li>
+                <article>
+                    <header class="pt-4">
+                        <h2>
+                            <a href="{{ path('app_event_details', {'id': event.id}) }}">{{ event.title }}</a>
+                        </h2>
+                        <p class="mb-1">Créé le {{ event.createdAt|date('d/m/Y H:i') }}</p>
+                        <p class="mb-1">Par : {{ event.user.name }}</p>
+                        <p class="mb-1">Catégorie : {{ event.category.name }}</p>
+                    </header>
+                     <p class="mb-1">Le {{ event.startAt|date('d/m/Y H:i') }} à {{ event.address }}, {{ event.city }} {{ event.postalCode }}</p>
+                    {{ event.description }}
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

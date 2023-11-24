@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un évènement{% endblock %}
+
+{% block body %}
+<style>
+    div.visually-hidden{
+        display:none;
+    }
+</style>
+
+    <h1>Créer un évènement</h1>
+
+    {{ form(form) }}
+
+{% endblock %}
