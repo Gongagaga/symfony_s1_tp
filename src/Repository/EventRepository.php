@@ -32,7 +32,7 @@ class EventRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('e')
             ->orderBy('e.createdAt', 'DESC')
-            ->setMaxResults(5)
+            ->setMaxResults(4)
             ->getQuery()
             ->getResult();
     }
